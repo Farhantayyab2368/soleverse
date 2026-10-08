@@ -50,7 +50,7 @@ export default function Signup() {
   }
 
   return (
-    <AuthLayout title="Create account" heading="Join Soleverse" subheading="Become a member for early access, free express shipping and exclusive drops." productId="velocity-pro" colorIndex={0}>
+    <AuthLayout title="Create account" heading="Join Stridevolt" subheading="Become a member for early access, free express shipping and exclusive drops." productId="velocity-pro" colorIndex={0}>
       <GoogleButton />
       <form onSubmit={submit} noValidate className="space-y-5">
         <AnimatePresence>

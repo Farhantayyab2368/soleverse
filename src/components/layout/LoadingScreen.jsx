@@ -14,7 +14,7 @@ const ease = [0.76, 0, 0.24, 1]
 const STEPS = 8
 const STATUS = ['Lacing up', 'Inflating AeroFoam™', 'Calibrating fit', 'Tying the knot', 'Ready to step']
 const SIZES = [39, 40, 41, 42, 43, 44, 45]
-const WORD = 'SOLEVERSE'
+const WORD = 'STRIDEVOLT'
 
 // Footprint trail: walks diagonally from bottom-left to top-right, alternating feet.
 const PRINTS = Array.from({ length: STEPS }, (_, i) => {
@@ -95,7 +95,7 @@ export default function LoadingScreen({ onDone }) {
       exit="exit"
       variants={{ exit: { opacity: 1, transition: { duration: 1.1 } } }}
       role="status"
-      aria-label={`Loading SOLEVERSE, ${pct}%`}
+      aria-label={`Loading STRIDEVOLT, ${pct}%`}
     >
       {/* shoebox halves */}
       <motion.div className="absolute inset-x-0 top-0 h-1/2 origin-top bg-ink" variants={panel('up')} />
@@ -140,7 +140,7 @@ export default function LoadingScreen({ onDone }) {
           <p className="eyebrow mb-5 text-volt-glow" aria-hidden>
             Step into the future
           </p>
-          <div className="display-wide flex overflow-hidden text-[10.5vw] leading-none sm:text-7xl" aria-hidden>
+          <div className="display-wide flex overflow-hidden text-[9.2vw] leading-none sm:text-7xl" aria-hidden>
             {WORD.split('').map((ch, i) => (
               <motion.span
                 key={i}

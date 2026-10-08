@@ -33,7 +33,7 @@ function ShoeInstance({ style, colors, mirror }) {
 
 /**
  * Reusable sneaker for any R3F scene: the photoscanned model (public/models/shoe.glb) when available,
- * otherwise the procedural SOLEVERSE sneaker. `mirror` renders the left foot.
+ * otherwise the procedural STRIDEVOLT sneaker. `mirror` renders the left foot.
  */
 export default function ShoeModel({ style = 'sneaker', colors = DEFAULT_COLORS, mirror = false, spinner = true, ...props }) {
   return (

@@ -11,7 +11,7 @@ export default function NewArrivalsSection() {
         <SectionHeading
           eyebrow="Just Landed"
           id="new-title" title="New Arrivals"
-          description="Fresh silhouettes and first-look colourways, straight from the SOLEVERSE lab."
+          description="Fresh silhouettes and first-look colourways, straight from the STRIDEVOLT lab."
           action={
             <Button to="/new-arrivals" variant="primary" arrow>
               Explore New Arrivals

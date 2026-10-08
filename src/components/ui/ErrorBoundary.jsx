@@ -9,7 +9,7 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error) {
-    if (import.meta.env.DEV) console.warn('[SOLEVERSE] Recovered from error:', error?.message ?? error)
+    if (import.meta.env.DEV) console.warn('[STRIDEVOLT] Recovered from error:', error?.message ?? error)
     this.props.onError?.(error)
   }
 

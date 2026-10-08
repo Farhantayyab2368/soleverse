@@ -7,7 +7,7 @@ import useLocalStorage, { readStorage } from '../hooks/useLocalStorage'
  */
 const AuthContext = createContext(null)
 
-const sessionKey = 'soleverse:session'
+const sessionKey = 'stridevolt:session'
 
 function loadSession() {
   try {
@@ -20,8 +20,8 @@ function loadSession() {
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(loadSession)
-  const [accounts, setAccounts] = useLocalStorage('soleverse:accounts', [])
-  const [orders, setOrders] = useLocalStorage('soleverse:orders', [])
+  const [accounts, setAccounts] = useLocalStorage('stridevolt:accounts', [])
+  const [orders, setOrders] = useLocalStorage('stridevolt:orders', [])
 
   const persist = (u, remember) => {
     try {

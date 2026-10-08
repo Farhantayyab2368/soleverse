@@ -8,7 +8,7 @@ import { setNavTheme } from '../../hooks/useNavTheme'
  */
 export default function PageTransition({ title, darkHero = false, children, className }) {
   useLayoutEffect(() => {
-    document.title = title ? `${title} — SOLEVERSE` : 'SOLEVERSE — Step Into The Future'
+    document.title = title ? `${title} — STRIDEVOLT` : 'STRIDEVOLT — Step Into The Future'
     setNavTheme(darkHero ? 'dark' : 'light')
   }, [title, darkHero])
 

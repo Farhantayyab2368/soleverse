@@ -106,7 +106,7 @@ export default function Login() {
         </Button>
       </form>
       <p className="mt-8 text-center text-sm text-steel">
-        New to SOLEVERSE?{' '}
+        New to STRIDEVOLT?{' '}
         <Link to="/signup" className="font-semibold text-ink underline-offset-4 hover:underline">
           Create an account
         </Link>

@@ -44,7 +44,7 @@ export default function SizeGuideModal({ open, onClose, highlight }) {
     <Modal open={open} onClose={onClose} title="Size Guide">
       <div className="space-y-5 px-6 pb-7 pt-4">
         <p className="text-sm leading-relaxed text-steel">
-          SOLEVERSE shoes fit true to size. Measure your foot from heel to longest toe and match it to the
+          STRIDEVOLT shoes fit true to size. Measure your foot from heel to longest toe and match it to the
           centimetre column. Between sizes? Go half a size up for running styles.
         </p>
         <SizeTable highlight={highlight} />

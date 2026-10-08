@@ -18,7 +18,7 @@ export default function TechSection() {
           <div>
             <Reveal>
               <p className="eyebrow flex items-center gap-3 text-volt-glow">
-                <span className="h-px w-8 bg-current" /> SOLEVERSE Technology
+                <span className="h-px w-8 bg-current" /> STRIDEVOLT Technology
               </p>
             </Reveal>
             <h2 id="tech-title" className="display mt-4 text-[2.4rem] sm:text-6xl xl:text-[4.6rem]">
@@ -28,7 +28,7 @@ export default function TechSection() {
           </div>
           <Reveal delay={0.1}>
             <p className="max-w-lg text-lg leading-relaxed text-white/60 lg:ml-auto">
-              Every SOLEVERSE shoe begins as a digital twin. We sculpt, simulate and refine each component in 3D — from the
+              Every STRIDEVOLT shoe begins as a digital twin. We sculpt, simulate and refine each component in 3D — from the
               density of the foam to the flex of the mesh — before a single physical sample is made.
             </p>
           </Reveal>

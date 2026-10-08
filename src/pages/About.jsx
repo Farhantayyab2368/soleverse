@@ -34,7 +34,7 @@ const CHAPTERS = [
     id: 'story',
     eyebrow: 'Our Story',
     title: 'Born on the track. Raised in the city.',
-    body: 'SOLEVERSE started in 2019 in a small studio with a 3D printer, a foot scanner and a simple question: what if shoes were designed around how people actually move? Seven years later, that question still shapes every pair we make.',
+    body: 'STRIDEVOLT started in 2019 in a small studio with a 3D printer, a foot scanner and a simple question: what if shoes were designed around how people actually move? Seven years later, that question still shapes every pair we make.',
     image: { productId: 'aero-x1', colorIndex: 1, view: 'side', tone: 'linear-gradient(135deg,#0f1b3d,#1a46d6 60%,#5b8cff)', word: 'Origin' },
   },
   {
@@ -48,7 +48,7 @@ const CHAPTERS = [
     id: 'design',
     eyebrow: 'Our Design Philosophy',
     title: 'Nothing extra. Nothing missing.',
-    body: 'Every line on a SOLEVERSE shoe has a job. We strip away decoration until only function remains — then refine that function until it becomes beautiful.',
+    body: 'Every line on a STRIDEVOLT shoe has a job. We strip away decoration until only function remains — then refine that function until it becomes beautiful.',
     image: { productId: 'eclipse-street', colorIndex: 1, view: 'angle', tone: 'linear-gradient(135deg,#d9d4ca,#f4f1ea)', word: 'Form' },
   },
 ]
@@ -77,7 +77,7 @@ export default function About() {
         <div className="pointer-events-none absolute right-[-10%] top-[10%] h-[40rem] w-[40rem] rounded-full bg-volt/25 blur-[140px]" aria-hidden />
         <motion.div style={{ y: heroY, opacity: heroOpacity }} className="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease }} className="eyebrow flex items-center gap-3 text-volt-glow">
-            <span className="h-px w-8 bg-current" /> About SOLEVERSE
+            <span className="h-px w-8 bg-current" /> About STRIDEVOLT
           </motion.p>
           <h1 className="display-wide mt-6 text-[3rem] leading-[0.88] sm:text-7xl lg:text-[8.5rem]">
             {['We design', 'the next', 'step.'].map((line, i) => (
@@ -154,7 +154,7 @@ export default function About() {
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-steel">
                 Digital prototyping means fewer physical samples and less waste. Our uppers use recycled polyester, our laces are 100%
-                recycled, and every box is plastic-free. By 2028, every SOLEVERSE shoe will be fully recyclable through our Return &
+                recycled, and every box is plastic-free. By 2028, every STRIDEVOLT shoe will be fully recyclable through our Return &
                 Renew programme.
               </p>
             </Reveal>

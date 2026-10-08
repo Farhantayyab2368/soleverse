@@ -19,7 +19,7 @@ export default function NewArrivals() {
       <PageHeader
         eyebrow="Fresh drops"
         title="New Arrivals"
-        description="The newest silhouettes and colourways from the SOLEVERSE lab. Updated every week."
+        description="The newest silhouettes and colourways from the STRIDEVOLT lab. Updated every week."
         crumbs={[{ label: 'New Arrivals' }]}
       />
 

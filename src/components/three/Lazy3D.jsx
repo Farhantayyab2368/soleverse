@@ -29,7 +29,7 @@ function ImageFallback({ colors, style, dark }) {
   const product = { ...base, style: style ?? base.style, colors: [{ ...base.colors[0], colors: colors ?? base.colors[0].colors }] }
   return (
     <div className="absolute inset-0 grid place-items-center p-8">
-      <ProductImage product={product} colorIndex={0} view="angle" className="absolute inset-[6%]" alt={dark ? 'SOLEVERSE sneaker' : undefined} />
+      <ProductImage product={product} colorIndex={0} view="angle" className="absolute inset-[6%]" alt={dark ? 'STRIDEVOLT sneaker' : undefined} />
     </div>
   )
 }

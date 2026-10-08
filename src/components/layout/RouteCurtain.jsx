@@ -39,7 +39,7 @@ export default function RouteCurtain() {
         animate={{ opacity: [0, 1, 1, 0], y: [16, 0, 0, -16] }}
         transition={{ duration: 1.05, times: [0, 0.34, 0.52, 0.72], ease }}
       >
-        Soleverse
+        Stridevolt
       </motion.p>
     </div>
   )

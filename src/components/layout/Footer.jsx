@@ -99,14 +99,14 @@ export default function Footer() {
         </div>
 
         <motion.p
-          className="display-wide pointer-events-none mt-20 flex select-none justify-center overflow-hidden whitespace-nowrap text-center text-[11.5vw] leading-[0.85] text-white/[0.06] 2xl:text-[10.5rem]"
+          className="display-wide pointer-events-none mt-20 flex select-none justify-center overflow-hidden whitespace-nowrap text-center text-[10.2vw] leading-[0.85] text-white/[0.06] 2xl:text-[9.4rem]"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ staggerChildren: 0.06 }}
           aria-hidden
         >
-          {'SOLEVERSE'.split('').map((ch, i) => (
+          {'STRIDEVOLT'.split('').map((ch, i) => (
             <motion.span
               key={i}
               className="inline-block"
@@ -119,7 +119,7 @@ export default function Footer() {
 
         <div className="mt-6 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 text-sm text-white/45 sm:flex-row sm:items-center">
           <div>
-            <p>© 2026 SOLEVERSE. All Rights Reserved.</p>
+            <p>© 2026 STRIDEVOLT. All Rights Reserved.</p>
             <p className="mt-1 text-xs text-white/30">
               3D sneaker model: “Materials Variants Shoe” by Shopify, licensed under{' '}
               <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/60">

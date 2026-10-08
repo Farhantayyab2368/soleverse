@@ -30,7 +30,7 @@ function HeroShoe({ colors, mirror, rest, from, delay, sway, scrollSpread }) {
     const t = state.clock.elapsedTime
     // start the entrance only once the model has finished loading
     if (start.current === null) {
-      const loaded = inner.current.getObjectByName('SoleverseRealShoe') || inner.current.getObjectByName('SoleverseShoe')
+      const loaded = inner.current.getObjectByName('StridevoltRealShoe') || inner.current.getObjectByName('StridevoltShoe')
       if (loaded) start.current = t
     }
     const p = start.current === null ? 0 : Math.min(1, Math.max(0, (t - start.current - delay) / 1.5))

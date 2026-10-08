@@ -9,7 +9,7 @@ import Button from '../components/ui/Button'
 import { cn, isEmail } from '../utils/format'
 
 const FAQ = [
-  { q: 'How do SOLEVERSE shoes fit?', a: 'True to size for most feet. If you’re between sizes, go half a size up for running styles and true to size for lifestyle styles.' },
+  { q: 'How do STRIDEVOLT shoes fit?', a: 'True to size for most feet. If you’re between sizes, go half a size up for running styles and true to size for lifestyle styles.' },
   { q: 'Can I change or cancel my order?', a: 'Orders can be changed or cancelled within 1 hour of being placed. Contact us as soon as possible and we’ll do our best.' },
   { q: 'Do you ship internationally?', a: 'Yes — we ship to 40+ countries. Duties and taxes are calculated at checkout so there are no surprises.' },
   { q: 'How does the 3D customizer work?', a: 'Pick colours for the upper, sole, laces and accents in real time. Custom pairs are made to order and ship in 10–14 days.' },
@@ -104,7 +104,7 @@ export default function Help() {
           <div className="mb-4 grid gap-3 sm:grid-cols-3">
             {[
               { icon: MessageCircle, t: 'Live chat', d: 'Mon–Fri, 8am–8pm' },
-              { icon: Mail, t: 'hello@soleverse.example', d: 'Reply within 24h' },
+              { icon: Mail, t: 'hello@stridevolt.example', d: 'Reply within 24h' },
               { icon: Phone, t: '+1 (800) 555-0199', d: 'Toll free' },
             ].map(({ icon: Icon, t, d }) => (
               <div key={t} className="rounded-[24px] bg-white p-5">

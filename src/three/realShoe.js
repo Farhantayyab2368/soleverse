@@ -62,7 +62,7 @@ export function loadRealShoe(url = REAL_SHOE_URL) {
       .then((ok) => (ok ? new GLTFLoader().loadAsync(url) : null))
       .then((gltf) => (gltf ? normalize(gltf.scene) : null))
       .catch((err) => {
-        if (import.meta.env.DEV) console.warn('[SOLEVERSE] 3D model unavailable, using procedural shoe:', err?.message)
+        if (import.meta.env.DEV) console.warn('[STRIDEVOLT] 3D model unavailable, using procedural shoe:', err?.message)
         return null
       })
   }
@@ -113,7 +113,7 @@ function makeMaterial(base, colors) {
       .replace('#include <common>', '#include <common>\nuniform vec3 uMain;\nuniform vec3 uSole;\nuniform vec3 uAccent;\nuniform vec3 uLace;')
       .replace('#include <map_fragment>', `#include <map_fragment>\n${RECOLOR_GLSL}`)
   }
-  material.customProgramCacheKey = () => 'soleverse-recolor'
+  material.customProgramCacheKey = () => 'stridevolt-recolor'
   return { material, uniforms }
 }
 
@@ -184,7 +184,7 @@ export function createRealShoe(template, colors, style = 'sneaker') {
   mesh.receiveShadow = true
   mesh.name = 'shoe'
   const group = new THREE.Group()
-  group.name = 'SoleverseRealShoe'
+  group.name = 'StridevoltRealShoe'
   group.add(mesh)
 
   const keys = { main: 'uMain', sole: 'uSole', accent: 'uAccent', lace: 'uLace' }

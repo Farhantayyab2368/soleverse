@@ -1,5 +1,5 @@
 /**
- * SOLEVERSE product catalogue — three shoe types: Joggers, Sneakers and Comfort. Prices are in PKR.
+ * STRIDEVOLT product catalogue — three shoe types: Joggers, Sneakers and Comfort. Prices are in PKR.
  *
  * To add a shoe, append an object below. Fields:
  *  - id: URL slug (/product/:id)

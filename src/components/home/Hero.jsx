@@ -44,7 +44,7 @@ export default function Hero({ ready = true }) {
           transition={{ duration: 1.6, delay: d + 0.2, ease }}
           className="display-wide text-outline absolute left-1/2 top-[18%] -translate-x-1/2 whitespace-nowrap text-[28vw] lg:top-[14%] lg:text-[19vw]"
         >
-          Soleverse
+          Stridevolt
         </motion.p>
       </div>
 

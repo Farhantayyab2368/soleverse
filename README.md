@@ -1,4 +1,4 @@
-# SOLEVERSE — Step Into The Future
+# STRIDEVOLT — Step Into The Future
 
 A premium, 3D-first sneaker e-commerce experience built with React, Vite, Tailwind CSS v4,
 Three.js / React Three Fiber / Drei and Framer Motion.
@@ -40,7 +40,7 @@ stripes & heel tab) while keeping the real knit and stitch detail, so every colo
 same realistic model. Product photos show left + right pairs plus single-shoe angles.
 
 To swap the model, replace `public/models/shoe.glb` (see `public/models/README.md`). If the file is missing or
-invalid, the procedural SOLEVERSE sneaker is used instead and nothing crashes.
+invalid, the procedural STRIDEVOLT sneaker is used instead and nothing crashes.
 
 ## Project structure
 

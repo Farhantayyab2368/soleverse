@@ -21,7 +21,7 @@ export default function Newsletter() {
     setError('')
     setStatus('loading')
     await new Promise((r) => setTimeout(r, 700))
-    writeStorage('soleverse:newsletter', email)
+    writeStorage('stridevolt:newsletter', email)
     setStatus('done')
   }
 

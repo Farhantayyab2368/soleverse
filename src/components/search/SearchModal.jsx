@@ -54,7 +54,7 @@ export default function SearchModal() {
       <div className="mx-auto w-full max-w-5xl px-5 pb-16 pt-6 sm:px-8 sm:pt-10">
         <div className="flex items-center justify-between">
           <h2 id="search-title" className="eyebrow text-mist">
-            Search Soleverse
+            Search Stridevolt
           </h2>
           <button onClick={close} className="grid h-11 w-11 place-items-center rounded-full bg-white shadow-soft transition hover:bg-fog" aria-label="Close search" data-cursor="hover">
             <X className="h-5 w-5" />

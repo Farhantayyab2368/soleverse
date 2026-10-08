@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import { ParametricGeometry } from 'three/examples/jsm/geometries/ParametricGeometry.js'
 
 /**
- * Procedural SOLEVERSE sneaker.
+ * Procedural STRIDEVOLT sneaker.
  * Plain Three.js so it can be used both inside React Three Fiber (<primitive />)
  * and by the off-screen product-photo renderer.
  *
@@ -438,7 +438,7 @@ export function createShoe(styleKey = 'runner', colors = DEFAULT_COLORS) {
   }
 
   const group = new THREE.Group()
-  group.name = 'SoleverseShoe'
+  group.name = 'StridevoltShoe'
   const add = (geo, mat, name) => {
     const mesh = new THREE.Mesh(geo, mat)
     mesh.name = name

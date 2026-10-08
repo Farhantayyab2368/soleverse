@@ -14,9 +14,9 @@ const itemKey = ({ productId, colorIndex, size, custom }) =>
   [productId, colorIndex, size, custom ? Object.values(custom).join('') : ''].join('|')
 
 export function ShopProvider({ children }) {
-  const [cart, setCart] = useLocalStorage('soleverse:cart', [])
-  const [wishlist, setWishlist] = useLocalStorage('soleverse:wishlist', [])
-  const [promo, setPromo] = useLocalStorage('soleverse:promo', null)
+  const [cart, setCart] = useLocalStorage('stridevolt:cart', [])
+  const [wishlist, setWishlist] = useLocalStorage('stridevolt:wishlist', [])
+  const [promo, setPromo] = useLocalStorage('stridevolt:promo', null)
   const [isCartOpen, setCartOpen] = useState(false)
   const [isSearchOpen, setSearchOpen] = useState(false)
   const [toast, setToast] = useState(null)

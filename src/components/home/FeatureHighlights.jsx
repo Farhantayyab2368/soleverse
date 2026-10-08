@@ -30,7 +30,7 @@ export function Marquee() {
 
 export default function FeatureHighlights() {
   return (
-    <section className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32" aria-label="Why SOLEVERSE">
+    <section className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32" aria-label="Why STRIDEVOLT">
       <motion.ul
         className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
         variants={staggerParent}
