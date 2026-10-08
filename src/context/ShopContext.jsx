@@ -5,7 +5,8 @@ import { CUSTOM_UPCHARGE } from '../data/customizer'
 
 const ShopContext = createContext(null)
 
-export const SHIPPING_RATES = { standard: 10, express: 25 }
+export const SHIPPING_RATES = { standard: 299, express: 799 }
+export const FREE_SHIPPING_THRESHOLD = 50000 // standard delivery is free above this subtotal (PKR)
 export const PROMO_CODES = { SOLE10: 0.1, FUTURE15: 0.15 }
 export const DEFAULT_SIZE = 42
 
@@ -88,9 +89,11 @@ export function ShopProvider({ children }) {
   const getTotals = useCallback(
     (shippingMethod = 'standard') => {
       const subtotal = cartItems.reduce((s, i) => s + i.lineTotal, 0)
-      const shipping = subtotal > 0 ? SHIPPING_RATES[shippingMethod] ?? SHIPPING_RATES.standard : 0
+      const method = SHIPPING_RATES[shippingMethod] ? shippingMethod : 'standard'
+      const freeStandard = method === 'standard' && subtotal >= FREE_SHIPPING_THRESHOLD
+      const shipping = subtotal > 0 && !freeStandard ? SHIPPING_RATES[method] : 0
       const rate = promo ? PROMO_CODES[promo] ?? 0 : 0
-      const discount = Math.round(subtotal * rate * 100) / 100
+      const discount = Math.round(subtotal * rate)
       return { subtotal, shipping, discount, total: Math.max(0, subtotal - discount + shipping) }
     },
     [cartItems, promo],

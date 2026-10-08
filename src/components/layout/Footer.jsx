@@ -130,7 +130,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <span className="inline-flex items-center gap-1.5">
-              <Globe className="h-4 w-4" /> United States (USD)
+              <Globe className="h-4 w-4" /> Pakistan (PKR)
             </span>
             <Link to="/help#faq" className="hover:text-white">
               Privacy

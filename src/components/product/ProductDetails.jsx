@@ -138,7 +138,7 @@ export default function ProductDetails({ product, colorIndex, setColorIndex }) {
 
       <ul className="mt-8 grid gap-3 rounded-[24px] bg-white p-5 text-sm sm:grid-cols-3">
         {[
-          { icon: Truck, t: 'Free shipping', d: 'On orders over $150' },
+          { icon: Truck, t: 'Free shipping', d: 'On orders over Rs 50,000' },
           { icon: RotateCcw, t: '30-day returns', d: 'Wear-tested guarantee' },
           { icon: ShieldCheck, t: '2-year warranty', d: 'On every pair' },
         ].map(({ icon: Icon, t, d }) => (
@@ -163,7 +163,7 @@ export default function ProductDetails({ product, colorIndex, setColorIndex }) {
           </ul>
         </Accordion>
         <Accordion title="Shipping & Returns">
-          Standard delivery in 3–5 business days ($10) or Express in 1–2 days ($25). Free returns within 30 days — even if you’ve
+          Standard delivery in 3–5 business days (Rs 299, free over Rs 50,000) or Express in 1–2 days (Rs 799). Free returns within 30 days — even if you’ve
           worn them outside.
         </Accordion>
         <Accordion title="Care">Spot clean with a soft brush and mild soap. Air dry away from direct heat. Do not machine wash.</Accordion>

@@ -10,7 +10,7 @@ import EmptyState from '../components/ui/EmptyState'
 import Modal from '../components/ui/Modal'
 import Button from '../components/ui/Button'
 import { MAX_PRICE, products } from '../data/products'
-import { cn } from '../utils/format'
+import { cn, formatPrice } from '../utils/format'
 
 const SORTS = [
   { value: 'featured', label: 'Featured' },
@@ -75,7 +75,7 @@ export default function Shop() {
     ...(query ? [{ label: `“${query}”`, clear: () => updateParam('q', '') }] : []),
     ...filters.sizes.map((s) => ({ label: `EU ${s}`, clear: () => setFilters((f) => ({ ...f, sizes: f.sizes.filter((x) => x !== s) })) })),
     ...filters.colors.map((c) => ({ label: c, clear: () => setFilters((f) => ({ ...f, colors: f.colors.filter((x) => x !== c) })) })),
-    ...(filters.maxPrice < MAX_PRICE ? [{ label: `Under $${filters.maxPrice}`, clear: () => setFilters((f) => ({ ...f, maxPrice: MAX_PRICE })) }] : []),
+    ...(filters.maxPrice < MAX_PRICE ? [{ label: `Under ${formatPrice(filters.maxPrice)}`, clear: () => setFilters((f) => ({ ...f, maxPrice: MAX_PRICE })) }] : []),
     ...(filters.minRating ? [{ label: `${filters.minRating}+ stars`, clear: () => setFilters((f) => ({ ...f, minRating: 0 })) }] : []),
   ]
 

@@ -121,12 +121,12 @@ export default function Help() {
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-[24px] bg-white p-6">
               <Truck className="h-5 w-5 text-volt" />
-              <p className="mt-4 font-semibold">Standard · $10</p>
-              <p className="text-sm text-steel">3–5 business days. Free on orders over $150.</p>
+              <p className="mt-4 font-semibold">Standard · Rs 299</p>
+              <p className="text-sm text-steel">3–5 business days. Free on orders over Rs 50,000.</p>
             </div>
             <div className="rounded-[24px] bg-white p-6">
               <Truck className="h-5 w-5 text-volt" />
-              <p className="mt-4 font-semibold">Express · $25</p>
+              <p className="mt-4 font-semibold">Express · Rs 799</p>
               <p className="text-sm text-steel">1–2 business days. Free for members.</p>
             </div>
           </div>

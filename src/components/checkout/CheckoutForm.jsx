@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Banknote, CreditCard, Lock, Rocket, Truck } from 'lucide-react'
 import Button from '../ui/Button'
-import { cn, isEmail } from '../../utils/format'
+import { cn, formatPrice, isEmail } from '../../utils/format'
 import { SHIPPING_RATES } from '../../context/ShopContext'
 
-const COUNTRIES = ['United States', 'Canada', 'United Kingdom', 'Germany', 'France', 'Netherlands', 'Australia', 'Japan', 'United Arab Emirates', 'Pakistan']
+const COUNTRIES = ['Pakistan', 'United Arab Emirates', 'Saudi Arabia', 'United Kingdom', 'United States', 'Canada', 'Germany', 'Australia']
 
 export function Field({ id, label, error, className, hint, children, ...props }) {
   return (
@@ -96,7 +96,7 @@ export default function CheckoutForm({ initialEmail = '', initialName = '', deli
     address: '',
     city: '',
     postal: '',
-    country: 'United States',
+    country: 'Pakistan',
     payment: 'card',
     cardName: '',
     cardNumber: '',
@@ -128,7 +128,7 @@ export default function CheckoutForm({ initialEmail = '', initialName = '', deli
       <Section step={1} title="Contact Information">
         <div className="grid gap-4 sm:grid-cols-2">
           <Field id="email" label="Email" type="email" autoComplete="email" value={v.email} onChange={set('email')} error={errors.email} placeholder="you@example.com" />
-          <Field id="phone" label="Phone" type="tel" autoComplete="tel" value={v.phone} onChange={set('phone')} error={errors.phone} placeholder="+1 555 000 1234" />
+          <Field id="phone" label="Phone" type="tel" autoComplete="tel" value={v.phone} onChange={set('phone')} error={errors.phone} placeholder="+92 300 1234567" />
         </div>
       </Section>
 
@@ -150,8 +150,8 @@ export default function CheckoutForm({ initialEmail = '', initialName = '', deli
 
       <Section step={3} title="Delivery">
         <div className="grid gap-3" role="radiogroup" aria-label="Delivery method">
-          <OptionCard name="delivery" value="standard" checked={delivery === 'standard'} onChange={setDelivery} icon={Truck} title="Standard Delivery" desc="3–5 business days" price={`$${SHIPPING_RATES.standard}`} />
-          <OptionCard name="delivery" value="express" checked={delivery === 'express'} onChange={setDelivery} icon={Rocket} title="Express Delivery" desc="1–2 business days" price={`$${SHIPPING_RATES.express}`} />
+          <OptionCard name="delivery" value="standard" checked={delivery === 'standard'} onChange={setDelivery} icon={Truck} title="Standard Delivery" desc="3–5 business days" price={formatPrice(SHIPPING_RATES.standard)} />
+          <OptionCard name="delivery" value="express" checked={delivery === 'express'} onChange={setDelivery} icon={Rocket} title="Express Delivery" desc="1–2 business days" price={formatPrice(SHIPPING_RATES.express)} />
         </div>
       </Section>
 

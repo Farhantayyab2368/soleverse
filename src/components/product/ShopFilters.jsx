@@ -92,7 +92,7 @@ export default function ShopFilters({ filters, setFilters, category, setCategory
           type="range"
           min={MIN_PRICE}
           max={MAX_PRICE}
-          step={5}
+          step={1000}
           value={filters.maxPrice}
           onChange={(e) => setFilters((f) => ({ ...f, maxPrice: Number(e.target.value) }))}
           className="mt-3 w-full accent-volt"

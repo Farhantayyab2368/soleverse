@@ -22,7 +22,7 @@ export const PRESETS = [
 ]
 
 export const CUSTOM_BASE_ID = 'aero-x1'
-export const CUSTOM_UPCHARGE = 20
+export const CUSTOM_UPCHARGE = 4999 // PKR
 
 export const colorName = (hex) =>
   CUSTOM_COLORS.find((c) => c.hex.toLowerCase() === hex?.toLowerCase())?.name ?? 'Custom'
