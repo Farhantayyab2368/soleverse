@@ -57,7 +57,7 @@ function HeroShoe({ colors, mirror, rest, from, delay, sway, scrollSpread }) {
     <group ref={outer} position={from}>
       <Float speed={1.5 + sway * 0.3} rotationIntensity={0.12} floatIntensity={0.55} floatingRange={[-0.08, 0.12]}>
         <group ref={inner}>
-          <ShoeModel colors={colors} mirror={mirror} spinner={false} position={[0, -0.6, 0]} />
+          <ShoeModel style="jogger" colors={colors} mirror={mirror} spinner={false} position={[0, -0.6, 0]} />
         </group>
       </Float>
     </group>

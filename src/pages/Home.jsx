@@ -28,14 +28,14 @@ export default function Home({ ready }) {
         <SectionHeading
           eyebrow="Collections"
           id="collections-title" title="Find your lane"
-          description="Four collections, one obsession: shoes engineered for exactly how you move."
+          description="Joggers, sneakers and comfort shoes — three collections engineered for exactly how you move."
           action={
             <Button to="/collections" variant="outline" arrow>
               All collections
             </Button>
           }
         />
-        <div className="mt-14 grid gap-4 md:grid-cols-2 lg:gap-5">
+        <div className="mt-14 grid gap-4 md:grid-cols-3 lg:gap-5">
           {collections.map((c, i) => (
             <CollectionBanner key={c.slug} collection={c} index={i} />
           ))}

@@ -12,7 +12,7 @@ import { formatPrice } from '../../utils/format'
 // show the colourway that matched the query (e.g. 'black' → black pair)
 const matchColor = (p, q) => Math.max(0, p.colors.findIndex((c) => `${c.name} ${c.family}`.toLowerCase().includes(q.trim().toLowerCase())))
 
-const POPULAR = ['Running', 'Aero', 'Basketball', 'Black', 'Lifestyle', 'Training']
+const POPULAR = ['Joggers', 'Sneakers', 'Comfort', 'Aero', 'Cloud', 'Black']
 
 export default function SearchModal() {
   const { isSearchOpen, setSearchOpen } = useShop()

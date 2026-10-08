@@ -85,7 +85,7 @@ function ControlButton({ label, onClick, children, active }) {
  * Drag to rotate, scroll/pinch to zoom, auto-rotates when idle.
  */
 export default function ThreeDShoeViewer({
-  style = 'runner',
+  style = 'sneaker',
   colors,
   className,
   showControls = true,

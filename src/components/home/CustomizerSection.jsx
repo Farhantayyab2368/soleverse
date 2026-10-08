@@ -45,7 +45,7 @@ export default function CustomizerSection() {
             <p className="display-wide text-outline-dark pointer-events-none absolute inset-x-0 top-[38%] select-none text-center text-[22vw] lg:text-[12vw]" aria-hidden>
               Aero X1
             </p>
-            <ThreeDShoeViewer colors={colors} style="runner" />
+            <ThreeDShoeViewer colors={colors} style="jogger" />
           </div>
 
           <div className="flex flex-col rounded-[32px] bg-paper p-6 sm:p-8">

@@ -2,7 +2,7 @@ import { Check, Star } from 'lucide-react'
 import { COLOR_FAMILIES, MAX_PRICE, MIN_PRICE, SIZES } from '../../data/products'
 import { cn, formatPrice } from '../../utils/format'
 
-export const SHOP_CATEGORIES = ['All', 'Sneakers', 'Running', 'Basketball', 'Lifestyle', 'Training']
+export const SHOP_CATEGORIES = ['All', 'Joggers', 'Sneakers', 'Comfort']
 
 function Group({ title, children }) {
   return (

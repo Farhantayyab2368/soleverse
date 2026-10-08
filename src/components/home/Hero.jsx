@@ -110,7 +110,7 @@ export default function Hero({ ready = true }) {
           <div>
             <p className="eyebrow text-[0.6rem] text-volt-glow">Just dropped</p>
             <p className="mt-1 font-semibold">Aero X1 — Volt Bone</p>
-            <p className="text-sm text-white/55">$129 · Running</p>
+            <p className="text-sm text-white/55">$129 · Joggers</p>
           </div>
           <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-ink transition-transform group-hover:rotate-45">
             <ArrowUpRight className="h-4 w-4" />

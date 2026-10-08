@@ -8,13 +8,13 @@ export const testimonials = [
   {
     quote: 'The fit is dialled in from the first wear. I ran a half marathon in them on day three — zero hot spots.',
     name: 'Priya Desai',
-    role: 'Weekend racer · Stratus Glide',
+    role: 'Weekend jogger · Stratus Glide',
     rating: 5,
   },
   {
-    quote: 'Lockdown is unreal. I feel quicker off the first step and my ankles have never felt more supported.',
+    quote: 'Twelve-hour shifts on my feet and nothing aches anymore. It genuinely feels like walking on foam.',
     name: 'Marcus Lee',
-    role: 'Point guard · Velocity Pro',
+    role: 'ER nurse · Cloud Haven',
     rating: 5,
   },
   {

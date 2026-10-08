@@ -15,11 +15,11 @@ export default function Collections() {
         dark
         eyebrow="Collections"
         title="Built for your lane"
-        description="Running, street, basketball or training — every SOLEVERSE collection is engineered around a different kind of movement."
+        description="Joggers, sneakers or comfort — every SOLEVERSE collection is engineered around a different kind of movement."
         crumbs={[{ label: 'Collections' }]}
       />
       <section className="mx-auto max-w-[1440px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24" aria-label="All collections">
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-3">
           {collections.map((c, i) => (
             <CollectionBanner key={c.slug} collection={c} index={i} size="lg" />
           ))}

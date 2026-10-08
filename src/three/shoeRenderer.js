@@ -98,8 +98,8 @@ async function renderNow({ style, colors, view, size = 'lg' }) {
   const { renderer, scene, camera, shoes, canvas, shadow } = studio
 
   const v = VIEWS[view] ?? VIEWS.side
-  // the photoscan has one silhouette, so every style shares it; the procedural fallback varies per style
-  const subjectKey = `${template ? 'real' : style}|${v.pair ? 'pair' : 'single'}`
+  // each shoe type has its own silhouette (reshaped photoscan, or procedural fallback)
+  const subjectKey = `${template ? 'real' : 'proc'}|${style}|${v.pair ? 'pair' : 'single'}`
   Object.values(shoes).forEach((s) => (s.group.visible = false))
   if (!shoes[subjectKey]) {
     shoes[subjectKey] = v.pair ? createPair(template, style, colors) : makeShoe(template, style, colors)
@@ -109,7 +109,7 @@ async function renderNow({ style, colors, view, size = 'lg' }) {
   shoe.group.visible = true
   shoe.setColors(colors)
 
-  const pull = style === 'court' && !template ? 1.14 : 1
+  const pull = style.startsWith('comfort') ? 1.07 : 1
   camera.up.set(...(v.up ?? [0, 1, 0]))
   camera.position.set(v.pos[0] * pull, v.pos[1] * pull + (pull - 1) * 2, v.pos[2] * pull)
   camera.lookAt(...v.look)

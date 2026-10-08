@@ -117,10 +117,69 @@ function makeMaterial(base, colors) {
   return { material, uniforms }
 }
 
+/* ------------------------------------------------------------------ */
+/* Shoe types: the scan is reshaped per silhouette                     */
+/* ------------------------------------------------------------------ */
+
+// Height (shoe space) where the scanned midsole meets the upper.
+const SOLE_TOP = 0.36
+
+/**
+ * Silhouette presets.
+ *  sole   – midsole stack multiplier · heel – extra stack at the heel (rocker / drop)
+ *  spring – toe-spring lift · width / length – footprint scale · collar – heel collar lift
+ */
+export const SHAPES = {
+  sneaker: { sole: 1, heel: 1, spring: 0, width: 1, length: 1, collar: 0 },
+  'sneaker-low': { sole: 0.82, heel: 1, spring: 0, width: 1.02, length: 1.01, collar: -0.1 },
+  'sneaker-mid': { sole: 1.05, heel: 1.05, spring: 0, width: 1.02, length: 1, collar: 0.62 },
+  jogger: { sole: 1.25, heel: 1.4, spring: 0.12, width: 0.96, length: 1.03, collar: 0 },
+  'jogger-max': { sole: 1.6, heel: 1.55, spring: 0.2, width: 0.98, length: 1.04, collar: 0.04 },
+  comfort: { sole: 1.75, heel: 1.12, spring: 0.06, width: 1.09, length: 1.01, collar: -0.04 },
+  'comfort-cloud': { sole: 2.25, heel: 1.08, spring: 0.1, width: 1.14, length: 1.02, collar: 0 },
+}
+
+export const shapeKey = (style) => (SHAPES[style] ? style : 'sneaker')
+
+// smooth minimum, so the stretch fades out softly at the midsole/upper seam
+const softMin = (a, b, r = 0.05) => -r * Math.log(Math.exp(-a / r) + Math.exp(-b / r))
+
+const shapedCache = new WeakMap()
+
+function shapedGeometry(template, style) {
+  const key = shapeKey(style)
+  let perTemplate = shapedCache.get(template)
+  if (!perTemplate) shapedCache.set(template, (perTemplate = new Map()))
+  if (perTemplate.has(key)) return perTemplate.get(key)
+
+  const s = SHAPES[key]
+  const geo = template.geometry.clone()
+  const pos = geo.attributes.position
+  const half = SHOE_LENGTH / 2
+  for (let i = 0; i < pos.count; i++) {
+    const x = pos.getX(i)
+    const y = pos.getY(i)
+    const t = (x + half) / SHOE_LENGTH // 0 heel → 1 toe
+    const k = s.sole * (1 + (s.heel - 1) * (1 - t))
+    let ny = y + (k - 1) * Math.max(0, softMin(y, SOLE_TOP))
+    // heel collar raise/lower (mid-tops and low-cut lifestyle shoes)
+    if (s.collar) ny += s.collar * Math.pow(Math.max(0, (y - 0.75) / 1.0), 1.5) * Math.max(0, 1 - t / 0.7)
+    // toe spring / rocker
+    ny += s.spring * Math.pow(Math.max(0, (t - 0.62) / 0.38), 2)
+    pos.setXYZ(i, x * s.length, ny, pos.getZ(i) * s.width)
+  }
+  geo.computeBoundingBox()
+  geo.translate(0, -geo.boundingBox.min.y, 0)
+  geo.computeBoundingBox()
+  geo.computeBoundingSphere()
+  perTemplate.set(key, geo)
+  return geo
+}
+
 /** Same interface as the procedural shoe: { group, setColors, lerpColors, dispose }. */
-export function createRealShoe(template, colors) {
+export function createRealShoe(template, colors, style = 'sneaker') {
   const { material, uniforms } = makeMaterial(template.material, colors)
-  const mesh = new THREE.Mesh(template.geometry, material)
+  const mesh = new THREE.Mesh(shapedGeometry(template, style), material)
   mesh.castShadow = true
   mesh.receiveShadow = true
   mesh.name = 'shoe'

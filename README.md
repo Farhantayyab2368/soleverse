@@ -68,11 +68,19 @@ src/
 └── utils/
 ```
 
-## Adding a product
+## Shoe types & adding a product
 
-Append an entry to `src/data/products.js` (`id`, `name`, `category`, `price`, `style`, `colors`, `sizes`, …).
-The `style` (`runner`, `court`, `street`, `trainer`) selects the 3D silhouette; product images are generated automatically
-for each colourway. To use real photos, put image URLs in `images`.
+The catalogue has three types — **Joggers**, **Sneakers** and **Comfort** — 5 products each. Every type uses a different
+silhouette, made by reshaping the photoscanned shoe (`SHAPES` in `src/three/realShoe.js`):
+
+| Style | Look |
+| --- | --- |
+| `jogger` / `jogger-max` | rocker sole, raised heel stack (max = tallest cushion) |
+| `sneaker` / `sneaker-low` / `sneaker-mid` | classic, slim low-profile, raised mid-top collar |
+| `comfort` / `comfort-cloud` | wide platform, extra-thick cloud sole |
+
+To add a shoe, append an entry to `src/data/products.js` with a `category`, a `style` from the table and one or more
+colourways (upper, sole, laces & lining, stripes & heel tab). Product photos are generated automatically.
 
 ## Notes
 

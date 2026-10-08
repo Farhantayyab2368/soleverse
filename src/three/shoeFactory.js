@@ -2,9 +2,20 @@ import * as THREE from 'three'
 import { createShoe, outsoleFor } from './buildShoe'
 import { createRealShoe } from './realShoe'
 
-/** Creates one shoe: the photoscanned model when its template is loaded, otherwise the procedural one. */
+// procedural fallback silhouette for each shoe type
+const FALLBACK_STYLE = {
+  jogger: 'runner',
+  'jogger-max': 'runner',
+  sneaker: 'street',
+  'sneaker-low': 'street',
+  'sneaker-mid': 'court',
+  comfort: 'trainer',
+  'comfort-cloud': 'trainer',
+}
+
+/** Creates one shoe: the photoscanned model (reshaped per type) when loaded, otherwise the procedural one. */
 export function makeShoe(template, style, colors) {
-  return template ? createRealShoe(template, colors) : createShoe(style, colors)
+  return template ? createRealShoe(template, colors, style) : createShoe(FALLBACK_STYLE[style] ?? style, colors)
 }
 
 export const colorTargets = (colors) => ({

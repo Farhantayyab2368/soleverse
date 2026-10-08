@@ -27,7 +27,7 @@ function ScrollShoe({ progress, colors }) {
   return (
     <group position={mobile ? [0, viewport.height * 0.14, 0] : [viewport.width * 0.16, -0.1, 0]} scale={scale}>
       <group ref={group}>
-        <ShoeModel colors={colors} position={[0, -0.75, 0]} />
+        <ShoeModel style="jogger" colors={colors} position={[0, -0.75, 0]} />
       </group>
       <ContactShadows position={[0, -1.2, 0]} opacity={0.75} scale={8} blur={2.8} far={3} resolution={512} color="#000" />
     </group>
